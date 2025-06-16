@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Burple</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 class="hidden">Burple</h1>
+    <header class="grid-con header_con">
+        <div class="col-span-2 l-col-span-3">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.svg" alt="Burple Logo" class="logo-img">
+            </a>
+        </div>
+        <nav id="main-nav" class="col-span-2 l-col-span-9">
+        <h2 class="hidden">Main Navigation</h2>
+        <input type="checkbox" id="hamburger" />
+        <label for="hamburger">
+          <img src="images/burger.svg" alt="hamburger menu icon" />
+        </label>
+        <div id="burger-con">
+          <ul>
+            <li>
+              <a href="index.html">Home
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </li>
+              <li><a href="flavors.html">Flavors
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </li>
+              <li><a href="about.html">About Us
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </li>
+              <li><a href="contact.html" class="selected1">Contact Us
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+        <h2>Get in Touch with Burple!</h2>
+
+        <section class="contact-form-section grid-con">
+            <h3 class="hidden">contact form</h3>
+            <p class="col-span-4 l-col-span-12">Have a question, feedback, or just want to say hello? We'd love to hear
+                from you!</p>
+            <form action="#" method="POST" class="col-span-4 l-col-span-12 contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+            </form>
+            <div class="col-span-4 l-col-span-4 wrapper1">
+                    <a href="#">Send Message!</a>
+            </div>
+        </section>
+
+        <section class="contact-info grid-con">
+            <h3 class="col-span-4 l-col-span-12">Other Ways to Connect:</h3>
+            <div class="col-span-2 l-col-span-6">
+                <p><strong>Email:</strong> <a href="mailto:info@burpledrinks.com">info@burpledrinks.com</a></p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+            </div>
+            <div class="col-span-2 l-col-span-6">
+                <p><strong>Follow Us:</strong>
+                    <a href="https://facebook.com/burpledrinks" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com/burpledrinks" target="_blank">Instagram</a>
+                </p>
+                <p><strong>Our Office:</strong><br>
+                    123 Fruity Lane, Funville, FV 12345</p>
+            </div>
+        </section>
+
+        <section class="faq-section grid-con">
+            <h3 class="col-span-4 l-col-span-12">Frequently Asked Questions:</h3>
+            <ul class="col-span-4 l-col-span-12">
+                <li><strong>Q: Where can I buy Burple?</strong><br>
+                    A: Burple is available at major grocery stores and online retailers. Check our store locator (coming
+                    soon!) for a location near you.</li>
+                <li><strong>Q: Is Burple sugar-free?</strong><br>
+                    A: Burple contains natural sugars from fruit, with no added sugars.</li>
+                <li><strong>Q: Are your bottles recyclable?</strong><br>
+                    A: Yes, all Burple bottles are 100% recyclable!</li>
+            </ul>
+        </section>
+    </main>
+
+   <footer>
+        <div class="footer-content grid-con">
+            <h2 class="hidden">footer contact</h2>
+            <div class="footer-nav col-span-2 l-col-span-6">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="flavors.html">Flavors</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social col-span-2 l-col-span-6">
+                <h3>Connect With Us!</h3>
+                <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="grid-con">
+            <div class="footer-info col-span-4 l-col-span-12">
+                <p>&copy; 2025 Burple. All rights reserved.</p>
+                <p>Made with natural goodness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

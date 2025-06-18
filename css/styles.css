@@ -59,6 +59,7 @@ header {
 #main-nav input,
 #burger-con {
   display: none;
+  background-color: #7b3e95;
 }
 
 #main-nav input:checked~#burger-con {

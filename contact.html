@@ -5,154 +5,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Burple</title>
-    <link rel="stylesheet" href="css/grid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <h1 class="hidden">Burple</h1>
-    <header class="grid-con header_con">
-        <div class="col-span-2 l-col-span-3">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.svg" alt="Burple Logo" class="logo-img">
-            </a>
+    <h1>Burple</h1>
+    <header class="flex items-center justify-between p-4 z-10">
+        <div>
+            <a href="index.html">
+                <img src="images/logo_primary.png" alt="Burple Logo" class="logo"> </a>
         </div>
-        <nav id="main-nav" class="col-span-2 l-col-span-9">
-        <h2 class="hidden">Main Navigation</h2>
-        <input type="checkbox" id="hamburger" />
-        <label for="hamburger">
-          <img src="images/burger.svg" alt="hamburger menu icon" />
-        </label>
-        <div id="burger-con">
-          <ul>
-            <li>
-              <a href="index.html">Home
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-              <li><a href="flavors.html">Flavors
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-              <li><a href="about.html">About Us
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-              <li><a href="contact.html" class="selected1">Contact Us
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="relative">
+            <h2 class="hidden">Main Navigation</h2>
+            <input type="checkbox" id="hamburger" class="hidden peer">
+            <label for="hamburger" class="lg:hidden cursor-pointer p-2">
+                <img src="images/burger.svg" alt="hamburger menu icon" class="w-8 h-8">
+            </label>
+            <div
+                class="absolute inset-x-0 top-full p-4 transition-transform duration-300 ease-in-out -translate-y-full peer-checked:translate-y-0 lg:static lg:translate-y-0 lg:flex lg:items-center lg:space-x-6">
+                <ul class="flex flex-col space-y-4 lg:flex-row lg:space-y-0">
+                    <li><a href="index.html" class="block py-2 px-4 box">Home</a></li>
+                    <li><a href="flavors.html" class="block py-2 px-4 box">Flavors</a></li>
+                    <li><a href="contact.html" class="block py-2 px-4 box select">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <main class="story-section">
-        <section class="grid-con contact-header">
-        <h2 class="col-span-2 l-col-span-6">Get in Touch with Burple!</h2>
-        <div class="col-span-2 l-col-span-6">
-        <img src="images/kids_drink.png" alt="kids drinking Burple" class="contact-image">
-        </div>
-        </section>
-        <section class="contact-form-section grid-con">
-            <h3 class="hidden">contact form</h3>
-            <p class="col-span-4 l-col-span-12">Have a question, feedback, or just want to say hello? We'd love to hear
-                from you!</p>
-            <form action="#" method="POST" class="col-span-4 l-col-span-12 contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-            </form>
-            <div class="col-span-4 l-col-start-8 l-col-end-12 wrapper1">
-                    <a href="#">Send Message!</a>
-            </div>
-        </section>
+    <main class="container mx-auto px-4 py-8 mt-24">
 
-        <section class="contact-info grid-con story-section">
-            <h3 class="col-span-4 l-col-span-12">Other Ways to Connect:</h3>
-            <div class="col-span-2 l-col-span-3">
-                <p><strong>Email:</strong> <a href="mailto:info@burpledrinks.com">info@burpledrinks.com</a></p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
-            </div>
-            <div class="col-span-2 l-col-span-9 contact-details">
-                <p><strong>Fol Us:</strong>
-                    <a href="https://facebook.com/burpledrinks" target="_blank">
-                        <img src="images/facebook.svg" alt="facebook">
-                    </a> |
-                    <a href="https://instagram.com/burpledrinks" target="_blank">
-                        <img src="images/instagram.svg" alt="instagram">
+        <section class="relative h-[400px] text-white text-center hero">
+            <h2 class="hidden">hero video</h2>
+            <video class="absolute z-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="relative flex flex-col h-full text-white p-6 md:p-12">
+                <div class="text-left max-w-2xl">
+                    <h3 class="text-4xl md:text-6xl font-bold leading-tight">Our Burple Story</h3>
+                    <p class="mt-4 text-lg md:text-xl">Wholesome Fun in Every Sip!</p>
+                    <a href="about.html" class="mt-6 inline-block py-3 px-8 link">
+                        <div class="color"></div>
+                        <span>Learn More &#8614;</span>
                     </a>
-                </p>
-                <p><strong>Our Office:</strong><br>
-                    123 Fruity Lane, Funville, FV 12345</p>
+                </div>
             </div>
         </section>
 
-        <section class="faq-section grid-con">
-            <h3 class="col-span-4 l-col-span-12">Frequently Asked Questions:</h3>
-            <ul class="col-span-4 l-col-span-12">
-                <li><strong>Q: Where can I buy Burple?</strong><br>
-                    A: Burple is available at major grocery stores and online retailers. Check our store locator (coming
-                    soon!) for a location near you.</li>
-                <li><strong>Q: Is Burple sugar-free?</strong><br>
-                    A: Burple contains natural sugars from fruit, with no added sugars.</li>
-                <li><strong>Q: Are your bottles recyclable?</strong><br>
-                    A: Yes, all Burple bottles are 100% recyclable!</li>
-            </ul>
+        <section class="bg-white rounded-md py-12 px-6 md:py-20">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+                <div class="order-2 md:order-1 flex items-center justify-center">
+                    <img src="images/poster-03.jpg" alt="kids drinking Burple" class="w-full max-w-sm rounded-lg shadow-xl h-full">
+                </div>
+
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#56509b] mb-6">Get in Touch with Burple!</h2>
+                    <p class="text-lg text-gray-700 mb-8">Have a question, feedback, or just want to say hello? We'd
+                        love to hear from you!</p>
+
+                    <form action="#" method="POST" class="space-y-6 bg-[#fdc649] p-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Name:</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject:</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message:</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full md:w-auto bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300 btn">
+                            Send Message!
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-6 md:py-20 bg-white">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#629d61] mb-6">Other Ways to Connect:</h3>
+                        <div class="space-y-4">
+                            <p class="text-lg text-gray-700">
+                                <strong class="font-semibold">Email:</strong>
+                                <a href="mailto:info@burpledrinks.com"
+                                    class="text-blue-600 hover:underline ml-2">info@burpledrinks.com</a>
+                            </p>
+                            <p class="text-lg text-gray-700">
+                                <strong class="font-semibold">Phone:</strong>
+                                <span class="ml-2">(555) 123-4567</span>
+                            </p>
+                            <p class="text-lg text-gray-700">
+                                <strong class="font-semibold">Follow Us:</strong>
+                                <a href="https://facebook.com/"  target="_blank" class="inline-block ml-2 hover:opacity-80">
+                                    <img src="images/facebook.svg" alt="facebook" class="w-6 h-6">
+                                </a>
+                                <a href="https://instagram.com/" target="_blank" class="inline-block ml-4 hover:opacity-80">
+                                    <img src="images/instagram.svg" alt="instagram" class="w-6 h-6">
+                                </a>
+                            </p>
+                            <p class="text-lg text-gray-700">
+                                <strong class="font-semibold block mb-1">Our Office:</strong>
+                                123 Fruity Lane, Funville, FV 12345
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#ef6f4a] mb-6">Frequently Asked Questions:</h3>
+                        <ul class="space-y-6 bg-[#1b9ab5] p-4">
+                            <li>
+                                <strong class="block text-lg font-semibold text-[#d25357] mb-1">Q: Where can I buy
+                                    Burple?</strong>
+                                <p class="text-gray-700">A: Burple is available at major grocery stores and online
+                                    retailers. Check our store locator (coming soon!) for a location near you.</p>
+                            </li>
+                            <li>
+                                <strong class="block text-lg font-semibold text-[#d25357] mb-1">Q: Is Burple
+                                    sugar-free?</strong>
+                                <p class="text-gray-700">A: Burple contains natural sugars from fruit, with no added
+                                    sugars.</p>
+                            </li>
+                            <li>
+                                <strong class="block text-lg font-semibold text-[#d25357] mb-1">Q: Are your bottles
+                                    recyclable?</strong>
+                                <p class="text-gray-700">A: Yes, all Burple bottles are 100% recyclable!</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-   <footer>
-        <div class="footer-content grid-con">
+    <footer class="bg-[#56509b] text-[#fcf7e2] py-8 px-4 mt-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <h2 class="hidden">footer contact</h2>
-            <div class="footer-nav col-span-2 l-col-span-6">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="flavors.html">Flavors</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-purple-300 transition duration-200">Home</a></li>
+                    <li><a href="flavors.html" class="hover:text-purple-300 transition duration-200">Flavors</a></li>
+                    <li><a href="contact.html" class="hover:text-purple-300 transition duration-200">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="footer-social col-span-2 l-col-span-6">
-                <h3>Connect With Us!</h3>
-                <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
-                    <img src="images/facebook.svg" alt="Facebook">
-                </a>
-                <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
-                    <img src="images/instagram.svg" alt="Instagram">
-                </a>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Connect With Us!</h3>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
+                        <img src="images/facebook.svg" alt="Facebook"
+                            class="w-8 h-8 hover:opacity-75 transition duration-200">
+                    </a>
+                    <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
+                        <img src="images/instagram.svg" alt="Instagram"
+                            class="w-8 h-8 hover:opacity-75 transition duration-200">
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="grid-con">
-            <div class="footer-info col-span-4 l-col-span-12">
-                 <p>&copy; 2025 Burple. All rights reserved. | Made with natural goodness.</p>
-            </div>
+        <div class="border-t border-[#ef6f4a] mt-8 pt-4 text-center">
+            <p class="text-sm ">
+                &copy; 2025 Burple. All rights reserved. | Made with natural goodness.
+            </p>
         </div>
     </footer>
 

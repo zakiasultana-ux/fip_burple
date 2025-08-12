@@ -1,134 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burple Flavors</title>
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <h1 class="hidden">Burple</h1>
-    <header class="grid-con header_con">
-         <div class="col-span-2 l-col-span-3">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.svg" alt="Burple Logo" class="logo-img">
-            </a>
-        </div>
-        <nav id="main-nav" class="col-span-2 l-col-span-9">
-        <h2 class="hidden">Main Navigation</h2>
-        <input type="checkbox" id="hamburger" />
-        <label for="hamburger">
-          <img src="images/burger.svg" alt="hamburger menu icon" />
-        </label>
-        <div id="burger-con">
-          <ul>
-            <li>
-              <a href="index.html">Home
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-              <li><a href="flavors.html" class="selected1">Flavors
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-              <li><a href="about.html">About Us
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-              <li><a href="contact.html">Contact Us
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
 
-    <main class="flavors-page">
-        <h2>Explore the Delicious World of Burple Flavors!</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Burple Flavors</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
 
-        <section class="grid-con">
-            <div class="col-span-2 l-col-span-4 flavor-item">
-                <img src="images/blue-raspberry.png" alt="Blue Raspberry Blast Burple bottle">
-                <h3>Blue Raspberry Blast</h3>
-                <p>A vibrant explosion of mixed berries, sweet and tangy – perfect for little adventurers. Packed with natural berry goodness!</p>
-            </div>
-            <div class="col-span-2 l-col-span-4 flavor-item">
-                <img src="images/ornge.png" alt="Orange Burst Burple bottle">
-                <h3>Orange Burst</h3>
-                <p>Sunny and refreshing, our Orange Burst is like a sip of sunshine. Made with real oranges for that classic, zesty taste.</p>
-            </div>
-            <div class="col-span-2 l-col-span-4 flavor-item">
-                <img src="images/grape.png" alt="Grape Escape Burple bottle">
-                <h3>Grape Escape</h3>
-                <p>Indulge in the sweet and juicy taste of our Grape Escape. A timeless favorite that's naturally delicious and always a hit.</p>
-            </div>
-            <div class="col-span-2 l-col-span-4 flavor-item">
-                <img src="images/cherry.png" alt="Cherry Blast Burple bottle">
-                <h3>Cherry Blast</h3>
-                <p>Cherry Blast is a bold and juicy flavor bursting with the sweet and tangy taste of ripe cherries. It's the perfect refreshing treat to energize your day with a fruity kick!</p>
-            </div>
-            <div class="col-span-2 l-col-span-4 flavor-item">
-                <img src="images/strawberry.png" alt="Strawberry Burst Burple bottle">
-                <h3>Strawberry Burst</h3>
-                <p>Strawberry Burst is a sweet and refreshing flavor filled with the delicious taste of ripe strawberries. It's a juicy treat that brings a burst of fruity goodness in every bite!</p>
-            </div>
-            <div class="col-span-2 l-col-span-4 flavor-item">
-                <img src="images/lemon.png" alt="Lemon-Lime Escape Burple bottle">
-                <h3>Lemon-Lime Escape</h3>
-                <p>Lemon-Lime Escape is a zesty and refreshing flavor that combines the bright tang of lemon with the crisp taste of lime. It’s a cool, citrusy splash that instantly wakes up your senses!</p>
-            </div>
-        </section>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 
-        <section class="fun-facts grid-con">
-            <h3 class="col-span-4 l-col-span-12">Mix & Match Fun!</h3>
-            <p class="col-span-4 l-col-span-12">Did you know you can mix different Burple flavors for a unique taste adventure? Try Berry Blast with a splash of Orange Burst for a tropical twist!</p>
-            <p class="col-span-4 l-col-span-12">Our fruits are carefully selected for their natural sweetness and essential vitamins, making every sip a healthy choice!</p>
-        </section>
-    </main>
+    <body>
+        <h1>Burple</h1>
+        <header class="flex items-center justify-between p-4 z-10">
+            <div>
+                <a href="index.html">
+                    <img src="images/logo_primary.png" alt="Burple Logo" class="logo"> </a>
+            </div>
+            <nav class="relative">
+                <h2 class="hidden">Main Navigation</h2>
+                <input type="checkbox" id="hamburger" class="hidden peer">
+                <label for="hamburger" class="lg:hidden cursor-pointer p-2">
+                    <img src="images/burger.svg" alt="hamburger menu icon" class="w-8 h-8">
+                </label>
+                <div
+                    class="absolute inset-x-0 top-full p-4 transition-transform duration-300 ease-in-out -translate-y-full peer-checked:translate-y-0 lg:static lg:translate-y-0 lg:flex lg:items-center lg:space-x-6">
+                    <ul class="flex flex-col space-y-4 lg:flex-row lg:space-y-0">
+                        <li><a href="index.html" class="block py-2 px-4 box">Home</a></li>
+                        <li><a href="flavors.html" class="block py-2 px-4 box select">Flavors</a></li>
+                        <li><a href="contact.html" class="block py-2 px-4 box">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-     <footer>
-        <div class="footer-content grid-con">
-            <h2 class="hidden">footer contact</h2>
-            <div class="footer-nav col-span-2 l-col-span-6">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="flavors.html">Flavors</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-social col-span-2 l-col-span-6">
-                <h3>Connect With Us!</h3>
-                <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
-                    <img src="images/facebook.svg" alt="Facebook">
-                </a>
-                <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
-                    <img src="images/instagram.svg" alt="Instagram">
-                </a>
-            </div>
-        </div>
-        <div class="grid-con">
-            <div class="footer-info col-span-4 l-col-span-12">
-                 <p>&copy; 2025 Burple. All rights reserved. | Made with natural goodness.</p>
-            </div>
-        </div>
-    </footer>
+        <main class="container mx-auto px-4 py-8 mt-24">
+            <section class="relative h-[400px] text-white text-center hero">
+                <h2 class="hidden">hero video</h2>
+                <video class="absolute z-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                    <source src="video/hero.mp4" type="video/mp4">
+                </video>
+                <div class="relative flex flex-col h-full text-white p-6 md:p-12">
+                    <div class="text-left max-w-2xl">
+                        <h3 class="text-4xl md:text-6xl font-bold leading-tight">Our Burple Story</h3>
+                        <p class="mt-4 text-lg md:text-xl">Wholesome Fun in Every Sip!</p>
+                        <a href="about.html" class="mt-6 inline-block py-3 px-8 link">
+                            <div class="color"></div>
+                            <span>Learn More &#8614;</span>
+                        </a>    
+                    </div>
+                </div>
+            </section>
 
-    <script src="js/main.js"></script>
-</body>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-2 leading-tight text-[#56509b] mt-4">
+                Explore the Delicious World of Burple Flavors!
+            </h2>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 mt-8 bg-white p-12 rounded-lg shadow-md">
+                <h2 class="hidden">flavors card </h2>
+                <section class="cards">
+                    <h2 class="hidden">CSS Animation Testimonial Slider</h2>
+                    <div class="card">
+                        <section id="product-con">
+                            <h2 class="hidden">product info</h2>
+                        </section>
+                    </div>
+                    <div class="card back">
+                        <div class="grid-con" id="fruit-con">
+                            <h2 class="col-span-full client-name">Burple</h2>
+                        </div>
+                    </div>
+                    <section id="testimonial-controls" class="col-span-full arrow">
+                        <h2 class="hidden">Testimonial Navigation Buttons</h2>
+                        <button id="previous">
+                            <img src="images/left-arrow.png" alt="previous">
+                        </button>
+                        <button id="next">
+                            <img src="images/right-arrow.png" alt="next">
+                        </button>
+                    </section>
+                </section>
+            </section>
+
+            <section class="bg-[#e53b83] p-8 md:p-12 rounded-xl">
+                <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="text-center md:text-left md:w-1/2 bg-white p-4 rounded-xl shadow-lg">
+                        <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Mix & Match Fun! 🥳</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Did you know you can mix different Burple flavors for a unique taste adventure? Try **Berry
+                            Blast** with a splash of **Orange Burst** for a tropical twist!
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Our fruits are carefully selected for their natural sweetness and essential vitamins, making
+                            every sip a healthy choice!
+                        </p>
+                    </div>
+
+                    <div class="md:w-1/2 mt-6 md:mt-0">
+                        <img src="images/poster-02.jpg" alt="Mix and Match Burple Flavors" class="rounded-xl shadow-lg w-full h-64">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-[#56509b] text-[#fcf7e2] py-8 px-4 mt-12">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <h2 class="hidden">footer contact</h2>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-purple-300 transition duration-200">Home</a></li>
+                        <li><a href="flavors.html" class="hover:text-purple-300 transition duration-200">Flavors</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-300 transition duration-200">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us!</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
+                            <img src="images/facebook.svg" alt="Facebook"
+                                class="w-8 h-8 hover:opacity-75 transition duration-200">
+                        </a>
+                        <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
+                            <img src="images/instagram.svg" alt="Instagram"
+                                class="w-8 h-8 hover:opacity-75 transition duration-200">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#ef6f4a] mt-8 pt-4 text-center">
+                <p class="text-sm ">
+                    &copy; 2025 Burple. All rights reserved. | Made with natural goodness.
+                </p>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+
 </html>

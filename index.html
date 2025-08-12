@@ -1,128 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burple: The Fruity Fun Your Kids Will Love!</title>
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Burple: The Fruity Fun Your Kids Will Love!</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 
-<body>
-    <h1 class="hidden">Burple</h1>
-    <header class="grid-con header_con">
-        <div class="col-span-2 l-col-span-3">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.svg" alt="Burple Logo" class="logo-img">
-            </a>
-        </div>
-        <nav id="main-nav" class="col-span-2 l-col-span-9">
-            <h2 class="hidden">Main Navigation</h2>
-            <input type="checkbox" id="hamburger" />
-            <label for="hamburger">
-                <img src="images/burger.svg" alt="hamburger menu icon" />
-            </label>
-            <div id="burger-con">
-                <ul>
-                    <li>
-                        <a href="index.html" class="selected1">Home
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </li>
-                    <li><a href="flavors.html">Flavors
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </li>
-                    <li><a href="about.html">About Us
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </li>
-                    <li><a href="contact.html">Contact Us
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </li>
-                </ul>
+    <body class="font-montserrat text-gray-800">
+        <h1 class="hidden">Burple</h1>
+
+        <header class="flex items-center justify-between p-4 z-10">
+            <div>
+                <a href="index.html">
+                    <img src="images/logo_primary.png" alt="Burple Logo" class="logo"> </a>
             </div>
-        </nav>
-    </header>
+            <nav class="relative">
+                <h2 class="hidden">Main Navigation</h2>
+                <input type="checkbox" id="hamburger" class="hidden peer">
+                <label for="hamburger" class="lg:hidden cursor-pointer p-2">
+                    <img src="images/burger.svg" alt="hamburger menu icon" class="w-8 h-8">
+                </label>
+                <div
+                    class="absolute inset-x-0 top-full p-4 transition-transform duration-300 ease-in-out -translate-y-full peer-checked:translate-y-0 lg:static lg:translate-y-0 lg:flex lg:items-center lg:space-x-6">
+                    <ul class="flex flex-col space-y-4 lg:flex-row lg:space-y-0">
+                        <li><a href="index.html" class="block py-2 px-4 box select">Home</a></li>
+                        <li><a href="flavors.html" class="block py-2 px-4 box">Flavors</a></li>
+                        <li><a href="contact.html" class="block py-2 px-4 box">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-    <main class="home-page">
-        <section class="hero grid-con story-section">
-            <h2 class="hidden">home page</h2>
-            <div class="col-span-4 l-col-span-6 hero-content">
-                <h2>The Fruity Fun Your Kids Will Love!</h2>
-                <p>Say goodbye to artificial colors and hello to natural goodness! Burple is the delicious fruit drink crafted to bring smiles to little faces, made with real fruit and no compromises.</p>
-                <p>The Burple kids' drink was a popular children’s beverage in the 1980s and 1990s, known for its unique expandable accordion-style plastic bottle. It came in a variety of fruity flavours that made it fun and appealing to kids.</p>
-                <p>BURPLE is a splash of fruity fun created just for kids! Bursting with bold flavors, bright colors, and a bubbly personality, BURPLE is more than a drink—it's an adventure in every bottle. Whether it's a school lunchbox surprise or a summer playdate treat, BURPLE brings smiles, energy, and a big burst of fruit-powered joy.</p>
-                <div class="wrapper">
-                    <a href="#"><span>Discover Burple Flavors!</span></a>
+        <main class="container mx-auto px-4 py-8 mt-24">
+
+            <section class="relative h-[400px] text-white text-center hero">
+                <h2 class="hidden">hero video</h2>
+                <video class="absolute z-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                    <source src="video/hero.mp4" type="video/mp4">
+                </video>
+                <div class="relative flex flex-col h-full text-white p-6 md:p-12">
+                    <div class="text-left max-w-2xl">
+                        <h3 class="text-4xl md:text-6xl font-bold leading-tight">Our Burple Story</h3>
+                        <p class="mt-4 text-lg md:text-xl">Wholesome Fun in Every Sip!</p>
+                        <a href="about.html" class="mt-6 inline-block py-3 px-8 link">
+                            <div class="color"></div>
+                            <span>Learn More &#8614;</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 mt-12">
+                <h2 class="hidden">Home Page Content</h2>
+                <div class="text-center md:text-left bg-white p-12 rounded-lg shadow-md">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-[#56509b]">
+                        The Fruity Fun Your Kids Will Love!
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Say goodbye to artificial colors and hello to natural goodness! Burple is the delicious fruit drink
+                        crafted to bring smiles to little faces, made with real fruit and no compromises.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">The Burple kids' drink was a popular children’s beverage in the
+                        1980s and 1990s, known for its unique expandable accordion-style plastic bottle. It came in a
+                        variety of fruity flavours that made it fun and appealing to kids.</p>
+                    <p class="text-lg text-gray-700 mb-6">BURPLE is a splash of fruity fun created just for kids! Bursting
+                        with bold flavors, bright colors, and a bubbly personality, BURPLE is more than a drink—it's an
+                        adventure in every bottle. Whether it's a school lunchbox surprise or a summer playdate treat,
+                        BURPLE brings smiles, energy, and a big burst of fruit-powered joy.</p>
+                    <div>
+                        <a href="flavors.html" class="inline-block text-white font-bold py-3 px-6 btn-dis">
+                            <span>Discover Burple Flavors!</span>
+                            <div class="liquid"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="h-auto justify-center md:justify-end">
+                    <img src="images/poster-01.jpg" alt="Happy kids enjoying Burple fruit drinks" class="max-w-full h-[680px] rounded-lg shadow-xl ml-6">
+                </div>
+            </section>
+
+            <section class="bg-[#56509b] p-8 rounded-lg shadow-inner">
+                <h3 class="text-3xl font-bold text-center text-[#fcf7e2] mb-8">
+                    What Parents Are Saying:
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-purple-200">
+                        <p class="text-lg italic text-gray-600 mb-4">
+                            "My kids are super picky, but they absolutely love Burple! It's so great to find a drink that's
+                            healthy and they actually enjoy."
+                        </p>
+                        <span class="block text-right font-semibold text-[#56509b]">
+                            - Sarah L.
+                        </span>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-purple-200">
+                        <p class="text-lg italic text-gray-600 mb-4">"Finally, a fruit drink I can feel good about giving my
+                            children. Natural ingredients and delicious flavors!"</p>
+                        <span class="block text-right font-semibold text-[#56509b]">
+                            - Mark T.
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-[#56509b] text-[#fcf7e2] py-8 px-4 mt-12">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <h2 class="hidden">footer contact</h2>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-purple-300 transition duration-200">Home</a></li>
+                        <li><a href="flavors.html" class="hover:text-purple-300 transition duration-200">Flavors</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-300 transition duration-200">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us!</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
+                            <img src="images/facebook.svg" alt="Facebook"
+                                class="w-8 h-8 hover:opacity-75 transition duration-200">
+                        </a>
+                        <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
+                            <img src="images/instagram.svg" alt="Instagram"
+                                class="w-8 h-8 hover:opacity-75 transition duration-200">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-span-4 l-col-span-6 hero-image">
-                <img src="images/poster3_bg.png" alt="Happy kids enjoying Burple fruit drinks">
+            <div class="border-t border-[#ef6f4a] mt-8 pt-4 text-center">
+                <p class="text-sm ">
+                    &copy; 2025 Burple. All rights reserved. | Made with natural goodness.
+                </p>
             </div>
-        </section>
+        </footer>
 
-        <section class="testimonials">
-            <h3>What Parents Are Saying:</h3>
-            <div class="grid-con">
-                <div class="col-span-2 l-col-span-6 testimonial-item">
-                    <p>"My kids are super picky, but they absolutely love Burple! It's so great to find a drink that's
-                        healthy and they actually enjoy."</p>
-                    <span>- Sarah L.</span>
-                </div>
-                <div class="col-span-2 l-col-span-6 testimonial-item">
-                    <p>"Finally, a fruit drink I can feel good about giving my children. Natural ingredients and
-                        delicious flavors!"</p>
-                    <span>- Mark T.</span>
-                </div>
-            </div>
-        </section>
-    </main>
+        <script src="js/main.js"></script>
 
-    <footer>
-        <div class="footer-content grid-con">
-            <h2 class="hidden">footer contact</h2>
-            <div class="footer-nav col-span-2 l-col-span-6">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="flavors.html">Flavors</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-social col-span-2 l-col-span-6">
-                <h3>Connect With Us!</h3>
-                <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
-                    <img src="images/facebook.svg" alt="Facebook">
-                </a>
-                <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
-                    <img src="images/instagram.svg" alt="Instagram">
-                </a>
-            </div>
-        </div>
-        <div class="grid-con">
-            <div class="footer-info col-span-4 l-col-span-12">
-                <p>&copy; 2025 Burple. All rights reserved. | Made with natural goodness.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
+    </body>
 
 </html>

@@ -219,8 +219,6 @@ nav ul li:hover {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-left: 80%;
-  margin-bottom: 50px;
 }
 
 .card{

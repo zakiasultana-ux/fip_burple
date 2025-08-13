@@ -15,26 +15,28 @@
     <h1 class="hidden">Burple</h1>
 
     <header class="flex items-center justify-between p-4 z-10">
-        <div>
-            <a href="index.html">
-                <img src="images/logo_primary.png" alt="Burple Logo" class="logo"> </a>
-        </div>
-        <nav class="relative">
-            <h2 class="hidden">Main Navigation</h2>
+        <a href="index.html">
+            <img src="images/logo_primary.png" alt="Burple Logo" class="logo">
+        </a>
+
+        <nav class="relative" aria-label="Main Navigation">
+            <h2 class="sr-only">Main Navigation</h2>
+
             <input type="checkbox" id="hamburger" class="hidden peer">
-            <label for="hamburger" class="lg:hidden cursor-pointer p-2">
-                <img src="images/burger.svg" alt="hamburger menu icon" class="w-8 h-8">
+            <label for="hamburger" class="cursor-pointer p-2 lg:hidden block" aria-controls="main-menu" aria-expanded="false">
+                <img src="images/burger.svg" alt="hamburger menu icon" class="w-auto h-8">
             </label>
-            <div
-                class="absolute inset-x-0 top-full p-4 transition-transform duration-300 ease-in-out -translate-y-full peer-checked:translate-y-0 lg:static lg:translate-y-0 lg:flex lg:items-center lg:space-x-6">
-                <ul class="flex flex-col space-y-4 lg:flex-row lg:space-y-0">
-                    <li><a href="index.html" class="block py-2 px-4 box select">Home</a></li>
-                    <li><a href="flavors.html" class="block py-2 px-4 box">Flavors</a></li>
-                    <li><a href="contact.html" class="block py-2 px-4 box">Contact Us</a></li>
+
+            <div id="main-menu" class="absolute top-full right-0 w-auto overflow-hidden opacity-0 transition-all duration-300 ease-in-out peer-checked:max-h-96 peer-checked:opacity-100 lg:static lg:max-h-none lg:opacity-100 lg:flex lg:items-center lg:space-x-6 lg:shadow-none lg:w-auto">
+                <ul class="flex flex-col space-y-4 p-4 lg:flex-row lg:space-y-0 lg:space-x-6 lg:p-8">
+                    <li><a href="index.html" class="block py-2 px-4 font-medium box select">Home</a></li>
+                    <li><a href="flavors.html" class="block py-2 px-4 font-medium box">Flavors</a></li>
+                    <li><a href="contact.html" class="block py-2 px-4 font-medium box">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
 
     <main class="container mx-auto px-4 py-8 mt-24">
 

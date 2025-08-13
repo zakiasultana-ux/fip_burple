@@ -57,8 +57,8 @@
 
         <section class="bg-white rounded-md py-12 px-6 md:py-20">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-                <div class="order-2 md:order-1 flex items-center justify-center">
-                    <img src="images/poster-03.jpg" alt="kids drinking Burple" class="w-full max-w-sm rounded-lg shadow-xl h-full">
+                <div class="order-2 md:order-1">
+                    <img src="images/poster-03.jpg" alt="kids drinking Burple" class="w-full rounded-lg shadow-xl h-[800px]">
                 </div>
 
                 <div class="order-1 md:order-2">
@@ -185,7 +185,21 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        let link = document.querySelector(".link");
+        let color = document.querySelector(".color");
+
+        function muosehoverover() {
+            link.classList.add("is-active");
+        }
+
+        function mousehoverreverse() {
+            link.classList.remove("is-active");
+        }
+
+        link.addEventListener("mouseenter", muosehoverover);
+        link.addEventListener("mouseleave", mousehoverreverse);
+    </script>
 </body>
 
 </html>

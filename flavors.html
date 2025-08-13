@@ -1,143 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Burple Flavors</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burple Flavors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-    <body>
-        <h1>Burple</h1>
-        <header class="flex items-center justify-between p-4 z-10">
-            <div>
-                <a href="index.html">
-                    <img src="images/logo_primary.png" alt="Burple Logo" class="logo"> </a>
+<body>
+    <h1>Burple</h1>
+    <header class="flex items-center justify-between p-4 z-10">
+        <div>
+            <a href="index.html">
+                <img src="images/logo_primary.png" alt="Burple Logo" class="logo"> </a>
+        </div>
+        <nav class="relative">
+            <h2 class="hidden">Main Navigation</h2>
+            <input type="checkbox" id="hamburger" class="hidden peer">
+            <label for="hamburger" class="lg:hidden cursor-pointer p-2">
+                <img src="images/burger.svg" alt="hamburger menu icon" class="w-8 h-8">
+            </label>
+            <div
+                class="absolute inset-x-0 top-full p-4 transition-transform duration-300 ease-in-out -translate-y-full peer-checked:translate-y-0 lg:static lg:translate-y-0 lg:flex lg:items-center lg:space-x-6">
+                <ul class="flex flex-col space-y-4 lg:flex-row lg:space-y-0">
+                    <li><a href="index.html" class="block py-2 px-4 box">Home</a></li>
+                    <li><a href="flavors.html" class="block py-2 px-4 box select">Flavors</a></li>
+                    <li><a href="contact.html" class="block py-2 px-4 box">Contact Us</a></li>
+                </ul>
             </div>
-            <nav class="relative">
-                <h2 class="hidden">Main Navigation</h2>
-                <input type="checkbox" id="hamburger" class="hidden peer">
-                <label for="hamburger" class="lg:hidden cursor-pointer p-2">
-                    <img src="images/burger.svg" alt="hamburger menu icon" class="w-8 h-8">
-                </label>
-                <div
-                    class="absolute inset-x-0 top-full p-4 transition-transform duration-300 ease-in-out -translate-y-full peer-checked:translate-y-0 lg:static lg:translate-y-0 lg:flex lg:items-center lg:space-x-6">
-                    <ul class="flex flex-col space-y-4 lg:flex-row lg:space-y-0">
-                        <li><a href="index.html" class="block py-2 px-4 box">Home</a></li>
-                        <li><a href="flavors.html" class="block py-2 px-4 box select">Flavors</a></li>
-                        <li><a href="contact.html" class="block py-2 px-4 box">Contact Us</a></li>
-                    </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 mt-24">
+        <section class="relative h-[400px] text-white text-center hero">
+            <h2 class="hidden">hero video</h2>
+            <video class="absolute z-0 w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="relative flex flex-col h-full text-white p-6 md:p-12">
+                <div class="text-left max-w-2xl">
+                    <h3 class="text-4xl md:text-6xl font-bold leading-tight">Our Burple Story</h3>
+                    <p class="mt-4 text-lg md:text-xl">Wholesome Fun in Every Sip!</p>
+                    <a href="about.html" class="mt-6 inline-block py-3 px-8 link">
+                        <div class="color"></div>
+                        <span>Learn More &#8614;</span>
+                    </a>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </section>
 
-        <main class="container mx-auto px-4 py-8 mt-24">
-            <section class="relative h-[400px] text-white text-center hero">
-                <h2 class="hidden">hero video</h2>
-                <video class="absolute z-0 w-full h-full object-cover" autoplay loop muted playsinline>
-                    <source src="video/hero.mp4" type="video/mp4">
-                </video>
-                <div class="relative flex flex-col h-full text-white p-6 md:p-12">
-                    <div class="text-left max-w-2xl">
-                        <h3 class="text-4xl md:text-6xl font-bold leading-tight">Our Burple Story</h3>
-                        <p class="mt-4 text-lg md:text-xl">Wholesome Fun in Every Sip!</p>
-                        <a href="about.html" class="mt-6 inline-block py-3 px-8 link">
-                            <div class="color"></div>
-                            <span>Learn More &#8614;</span>
-                        </a>    
-                    </div>
-                </div>
-            </section>
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-2 leading-tight text-[#56509b] mt-4">
+            Explore the Delicious World of Burple Flavors!
+        </h2>
 
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-2 leading-tight text-[#56509b] mt-4">
-                Explore the Delicious World of Burple Flavors!
-            </h2>
-
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 mt-8 bg-white p-12 rounded-lg shadow-md">
-                <h2 class="hidden">flavors card </h2>
-                <section class="cards">
-                    <h2 class="hidden">CSS Animation Testimonial Slider</h2>
-                    <div class="card">
-                        <section id="product-con">
-                            <h2 class="hidden">product info</h2>
-                        </section>
-                    </div>
-                    <div class="card back">
-                        <div class="grid-con" id="fruit-con">
-                            <h2 class="col-span-full client-name">Burple</h2>
-                        </div>
-                    </div>
-                    <section id="testimonial-controls" class="col-span-full arrow">
-                        <h2 class="hidden">Testimonial Navigation Buttons</h2>
-                        <button id="previous">
-                            <img src="images/left-arrow.png" alt="previous">
-                        </button>
-                        <button id="next">
-                            <img src="images/right-arrow.png" alt="next">
-                        </button>
+        <section class="py-8 bg-white shadow-xl rounded-lg mb-4">
+            <h2 class="hidden">cards</h2>
+            <section class="cards max-w-screen-lg mx-auto p-4 ml-80">
+                <h2 class="hidden">CSS Animation Testimonial Slider</h2>
+                <div class="card bg-white rounded-2xl shadow-lg p-2 mb-6 flex flex-col items-center">
+                    <section id="product-con" class="w-full text-center">
                     </section>
+                </div>
+                <div class="card back bg-purple-50 rounded-2xl shadow-lg p-6 mb-6 flex flex-col items-center">
+                    <div class="grid grid-cols-1 gap-4 w-full" id="fruit-con">
+                        <h2 class="col-span-full client-name text-xl font-bold text-purple-800 text-center">Burple</h2>
+                    </div>
+                </div>
+                <section id="testimonial-controls" class="flex justify-between gap-6 mt-84 arrow">
+                    <h2 class="hidden">Testimonial Navigation Buttons</h2>
+
+                    <button id="previous"
+                        class="bg-[#1b9ab5] hover:bg-[#56509b] rounded-full p-3 shadow-md transition">
+                        <img src="images/left-arrow.png" alt="previous" class="w-6 h-6">
+                    </button>
+
+                    <button id="next" class="bg-[#1b9ab5] hover:bg-[#56509b] rounded-full p-3 shadow-md transition">
+                        <img src="images/right-arrow.png" alt="next" class="w-6 h-6">
+                    </button>
                 </section>
             </section>
+        </section>
 
-            <section class="bg-[#e53b83] p-8 md:p-12 rounded-xl">
-                <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div class="text-center md:text-left md:w-1/2 bg-white p-4 rounded-xl shadow-lg">
-                        <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Mix & Match Fun! 🥳</h3>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                            Did you know you can mix different Burple flavors for a unique taste adventure? Try **Berry
-                            Blast** with a splash of **Orange Burst** for a tropical twist!
-                        </p>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            Our fruits are carefully selected for their natural sweetness and essential vitamins, making
-                            every sip a healthy choice!
-                        </p>
-                    </div>
 
-                    <div class="md:w-1/2 mt-6 md:mt-0">
-                        <img src="images/poster-02.jpg" alt="Mix and Match Burple Flavors" class="rounded-xl shadow-lg w-full h-64">
-                    </div>
+        <section class="bg-[#e53b83] p-8 md:p-12 rounded-xl">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="text-center md:text-left md:w-1/2 bg-white p-4 rounded-xl shadow-lg">
+                    <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Mix & Match Fun! 🥳</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Did you know you can mix different Burple flavors for a unique taste adventure? Try **Berry
+                        Blast** with a splash of **Orange Burst** for a tropical twist!
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Our fruits are carefully selected for their natural sweetness and essential vitamins, making
+                        every sip a healthy choice!
+                    </p>
                 </div>
-            </section>
-        </main>
 
-        <footer class="bg-[#56509b] text-[#fcf7e2] py-8 px-4 mt-12">
-            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-                <h2 class="hidden">footer contact</h2>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-purple-300 transition duration-200">Home</a></li>
-                        <li><a href="flavors.html" class="hover:text-purple-300 transition duration-200">Flavors</a></li>
-                        <li><a href="contact.html" class="hover:text-purple-300 transition duration-200">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Connect With Us!</h3>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
-                            <img src="images/facebook.svg" alt="Facebook"
-                                class="w-8 h-8 hover:opacity-75 transition duration-200">
-                        </a>
-                        <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
-                            <img src="images/instagram.svg" alt="Instagram"
-                                class="w-8 h-8 hover:opacity-75 transition duration-200">
-                        </a>
-                    </div>
+                <div class="w-full md:w-1/2 mt-6 md:mt-0">
+                    <video src="video/burple.mp4" autoplay muted loop playsinline class="rounded-xl shadow-lg w-full h-64 object-cover">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
-            <div class="border-t border-[#ef6f4a] mt-8 pt-4 text-center">
-                <p class="text-sm ">
-                    &copy; 2025 Burple. All rights reserved. | Made with natural goodness.
-                </p>
-            </div>
-        </footer>
+        </section>
+    </main>
 
-        <script src="js/main.js"></script>
-    </body>
+    <footer class="bg-[#56509b] text-[#fcf7e2] py-8 px-4 mt-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <h2 class="hidden">footer contact</h2>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-purple-300 transition duration-200">Home</a></li>
+                    <li><a href="flavors.html" class="hover:text-purple-300 transition duration-200">Flavors</a></li>
+                    <li><a href="contact.html" class="hover:text-purple-300 transition duration-200">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Connect With Us!</h3>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="https://facebook.com/burpledrinks" target="_blank" aria-label="Burple on Facebook">
+                        <img src="images/facebook.svg" alt="Facebook"
+                            class="w-8 h-8 hover:opacity-75 transition duration-200">
+                    </a>
+                    <a href="https://instagram.com/burpledrinks" target="_blank" aria-label="Burple on Instagram">
+                        <img src="images/instagram.svg" alt="Instagram"
+                            class="w-8 h-8 hover:opacity-75 transition duration-200">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-[#ef6f4a] mt-8 pt-4 text-center">
+            <p class="text-sm ">
+                &copy; 2025 Burple. All rights reserved. | Made with natural goodness.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 
 </html>

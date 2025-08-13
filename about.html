@@ -56,7 +56,7 @@
             </div>
         </section>
 
-    <section class="bg-[#d25357] py-12 px-6 md:py-20">
+    <section class="bg-[#d25357] py-12 px-6 mt-4 md:py-20">
     <div class="container mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-[#fdc649] mb-8">Our Burple Story: Wholesome Fun in Every Sip!</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -105,7 +105,21 @@
         </div>
     </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+        let link = document.querySelector(".link");
+        let color = document.querySelector(".color");
+
+        function muosehoverover() {
+            link.classList.add("is-active");
+        }
+
+        function mousehoverreverse() {
+            link.classList.remove("is-active");
+        }
+
+        link.addEventListener("mouseenter", muosehoverover);
+        link.addEventListener("mouseleave", mousehoverreverse);
+    </script>
 </body>
 
 </html>
